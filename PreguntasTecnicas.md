@@ -2,26 +2,26 @@
 
 ## Preguntas Técnicas
 ```
-**¿Has aplicado los principios SOLID?**
+__¿Has aplicado los principios SOLID?__
 
 ```
 ```
-**¿Cuánto tiempo has estado pensando y escribiendo tests del código? Si hubieras tenido mucho más tiempo... ¿qué habrías añadido? Si no has realizado tests, ¿qué herramientas habrías utilizado para llevarlos a cabo?**
+__¿Cuánto tiempo has estado pensando y escribiendo tests del código? Si hubieras tenido mucho más tiempo... ¿qué habrías añadido? Si no has realizado tests, ¿qué herramientas habrías utilizado para llevarlos a cabo?__
 
 ```
 ```
-**¿Cómo mejorarías la API que has usado?**
+__¿Cómo mejorarías la API que has usado?__
 
 ```
 ```
-**¿Crees que esta API soporta peticiones CORS? ¿Cómo has llegado a esa conclusión?**
+__¿Crees que esta API soporta peticiones CORS? ¿Cómo has llegado a esa conclusión?__
 
 ```
 ```
-**¿Cómo rastrearías un problema de rendimiento en producción? ¿Alguna vez has tenido que hacerlo?**
+__¿Cómo rastrearías un problema de rendimiento en producción? ¿Alguna vez has tenido que hacerlo?__
 
 ```
 ```
-**Descríbete a ti mismo en formato JSON.**
+__Descríbete a ti mismo en formato JSON.__
 
 ```
