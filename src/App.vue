@@ -20,50 +20,17 @@
 
         <h1>Beers App</h1>
       </div>
-      <v-spacer></v-spacer>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
-    <v-navigation-drawer
-		v-model="drawer"
-		right
-		absolute
-		bottom
-		temporary
-    >
-      <v-list
-        nav
-        dense
-      >
-        <v-list-item-group
-          v-model="group"
-          active-class="deep-purple--text text--accent-4"
-        >
-          <v-list-item>
-            <v-list-item-title>Foo</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Bar</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Fizz</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Buzz</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
     <v-main>
 		<router-view />
     </v-main>
+	<LoaderBeer />
   </v-app>
 </template>
 
 <script>
 import appConfig from "@/app.config"
+import LoaderBeer from '@/components/LoaderBeer.vue'
 
 export default {
 	name: 'App',
@@ -74,6 +41,7 @@ export default {
 		}
 	},
 	components: {
+		LoaderBeer
 	},
 	data: () => ({
 		drawer: false,
