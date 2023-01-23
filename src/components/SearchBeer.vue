@@ -26,7 +26,7 @@
 			}),
       search: {
         get (){
-          return this.currentPage;
+          return this.currentSearch;
         },
         async set (value) {
           await this.$store.dispatch('beers/setSearch', value);

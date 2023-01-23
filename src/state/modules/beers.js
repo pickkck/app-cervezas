@@ -10,9 +10,12 @@ export default {
             total: 0
         },
         filters: {
-            beer_name: ""
+            beer_name: "",
+            brewed_after: "",
+            brewed_before: "",
         },
-        is_loading: false
+        is_loading: false,
+        show_dialog: false
     },
     getters: {
         getCurrentPage(state){
@@ -23,6 +26,15 @@ export default {
         },
         getCurrentSearch(state){
             return state.filters.beer_name;
+        },
+        getShowDialog(state){
+            return state.show_dialog;
+        },
+        getFrom(state){
+            return state.filters.brewed_after;
+        },
+        getTo(state){
+            return state.filters.brewed_before;
         },
     },
     mutations: {
@@ -40,6 +52,16 @@ export default {
         },
         SET_LOADER: (state, is_loading) => {
             state.is_loading = is_loading
+        },
+        SET_SHOW_DIALOG: (state, show_dialog) => {
+            state.show_dialog = show_dialog
+        },
+        SET_FILTERS_EMPTY: (state, filters_reset) => {
+            state.filters = {...filters_reset}
+        },
+        SET_DATES: (state, dates) => {
+            state.filters.brewed_after = dates[0]
+            state.filters.brewed_before = dates[1]
         },
     },
     actions: {
@@ -61,6 +83,13 @@ export default {
                     }).
                     catch(error => console.log(error));
         },
+        async resetFilters({ commit, state }) {
+            let filters_reset = {};
+            for (const filter in state.filters){
+                filters_reset[filter] = "";
+            }
+            commit('SET_FILTERS_EMPTY', filters_reset);
+        },
         async setPage({ commit }, page) {
             await commit('SET_PAGE', page);
         },
@@ -69,6 +98,12 @@ export default {
         },
         async setLoader({ commit }, is_loading) {
             await commit('SET_LOADER', is_loading);
+        },
+        async setShowDialog({ commit }, show_dialog) {
+            await commit('SET_SHOW_DIALOG', show_dialog);
+        },
+        async setDates({ commit }, dates) {
+            await commit('SET_DATES', dates);
         },
     }
 }
