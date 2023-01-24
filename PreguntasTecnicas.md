@@ -17,18 +17,18 @@
 ```json
 
 {
-    name: {
-        first_name: "Aaron",
-        last_name: "Ramirez"
+    "name": {
+        "first_name": "Aaron",
+        "last_name": "Ramirez"
     },
-    age: 25,
-    weight: {
-        value: 76.7,
-        unit: "kg"
+    "age": 25,
+    "weight": {
+        "value": 76.7,
+        "unit": "kg"
     },
-    height: {
-        value: 167,
-        unit: "cm"
+    "height": {
+        "value": 167,
+        "unit": "cm"
     }
 }
 
