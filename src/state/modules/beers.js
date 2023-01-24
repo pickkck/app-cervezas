@@ -4,6 +4,7 @@ export default {
     namespaced: true,
     state: {
         beers: [],
+        beer: null,
         pagination: {
             per_page: 12,
             page: 1,
@@ -63,6 +64,9 @@ export default {
             state.filters.brewed_after = dates[0]
             state.filters.brewed_before = dates[1]
         },
+        SET_BEER: (state, beer) => {
+            state.beer = beer
+        },
     },
     actions: {
         async fetchBeers({ commit, state }) {
@@ -76,12 +80,19 @@ export default {
                     then((beers) => {
                         commit('SET_ALL_BEERS', beers.data);
                     }).
-                    catch(error => console.log(error));
+                    catch(() => commit('SET_LOADER', false));
             await axios.get('/beers',{ params: {per_page: 80, ...filters_apply} }).
                     then((allBeers) => {
                         commit('SET_TOTAL_BEERS', allBeers.data.length);
                     }).
-                    catch(error => console.log(error));
+                    catch(() => commit('SET_LOADER', false));
+        },
+        async fetchBeerByID({ commit }, id_beer) {
+            await axios.get('/beers/'+id_beer).
+                    then((beer) => {
+                        commit('SET_BEER', beer.data[0]);
+                    }).
+                    catch(() => commit('SET_LOADER', false));
         },
         async resetFilters({ commit, state }) {
             let filters_reset = {};

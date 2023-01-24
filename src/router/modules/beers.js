@@ -7,7 +7,7 @@ export default [
     },
     {
         path: '/beers/:id_beer',
-        name: 'beers.single_beer',
+        name: 'single_beer',
         component: () => import('@/views/Beers/SingleBeer.vue')
     },
     {

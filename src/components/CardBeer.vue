@@ -35,6 +35,7 @@
 			outlined
 			rounded
 			small
+			@click="$router.push({ name: 'single_beer', params: { id_beer: beer.id }})"
 			>
 				See Beer
 			</v-btn>
