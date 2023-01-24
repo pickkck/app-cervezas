@@ -93,9 +93,7 @@ pero fue pensado para conexiones lentas y no dar la sensacion de que la aplicaci
         "degree":"computer systems engineer",
         "institution":"Instituto Tecnologico de Celaya"
     },
-    "about_me": "Soy una persona que le gusta concoer nuevos temas, me gusta probar diferentes experiencias, viajar, deportes, 
-                 me apasiona tener nuevos desafios mediante los cuales pueda crecer como persona y profesionalmente, siempre procuro 
-                 compartir mi conocimiento y me agrada aprender de los demas."
+    "about_me": "Soy una persona que le gusta concoer nuevos temas, me gusta probar diferentes experiencias, viajar, deportes, me apasiona tener nuevos desafios mediante los cuales pueda crecer como persona y profesionalmente, siempre procuro compartir mi conocimiento y me agrada aprender de los demas."
 }
 
 ```
